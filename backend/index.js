@@ -4,6 +4,9 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
+console.log('🎬 Starting server process...');
+console.log('Environment PORT:', process.env.PORT);
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
