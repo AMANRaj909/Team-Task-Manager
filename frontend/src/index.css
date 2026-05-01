@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  --rose-vale: #A94A4A;
+  --cornsilk: #FFF6DA;
+  --white: #FFFFFF;
+  --grey-gradient: linear-gradient(135deg, #f3f4f6 0%, #d1d5db 100%);
+  
+  --background: var(--cornsilk);
+  --foreground: #000000; /* Pure black text */
+  --card: var(--white);
+  --primary: var(--rose-vale);
+  --border: rgba(169, 74, 74, 0.2);
+  --muted: #4b5563;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-rose: var(--rose-vale);
+  --color-corn: var(--cornsilk);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Global Text color fix to black */
+body {
+  color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6, p, label, input, select, textarea {
+  color: #000000;
+}
+
+/* Specific text colors that should be preserved */
+.text-rose { color: var(--rose-vale) !important; }
+.text-emerald-600 { color: #059669 !important; }
+.text-white { color: #FFFFFF !important; }
+.text-muted { color: #4b5563 !important; }
+
+/* Backgrounds that need white text */
+.bg-rose, .bg-primary, .bg-emerald-600 {
+  color: #FFFFFF !important;
+}
+
+.bg-rose *, .bg-primary *, .bg-emerald-600 * {
+  color: #FFFFFF !important;
+}
+
+button[type="submit"] {
+  color: #FFFFFF !important;
+}
+
+/* Premium Light Glassmorphism */
+.glass-light {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(24px);
+  border: 1px solid var(--border);
+}
+
+/* Premium Grey Gradient */
+.bg-premium-grey {
+  background: var(--grey-gradient);
+}
+
+/* Advanced Shadow */
+.premium-shadow {
+  box-shadow: 0 25px 50px -12px rgba(169, 74, 74, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cornsilk);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rose-vale);
+  border-radius: 10px;
+}
